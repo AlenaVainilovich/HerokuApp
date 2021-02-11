@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW HTML & CSS</title>
+</head>
+
+<style>
+   h1 {
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */
+    font-size: 200%; /* Размер шрифта в процентах */
+   }
+  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
+   }
+  p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12pt; /* Размер шрифта в пунктах */
+   }
+  td {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11pt; /* Размер шрифта в пунктах */
+   }
+  .left {
+    padding-right: 10px;
+    width: 50%;
+    text-align: left;
+}
+  .right {
+    width: 50%;
+    text-align: left;
+}
+.newperson {
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #EEEEEE;
+}
+button {
+    color: #00766d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #00a99d;
+    padding: 0 20px;
+    line-height: 29px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+</style>
+<body>
+<header>
+    <h1>Домашнее задание по теме: "Особенности тестирования web-приложений (html, json)"</h1>
+</header>
+
+<h2>Сотрудники</h2>
+
+<table width="25%" cellspacing="0" border="1">
+    <p>Список всех сотрудников компании</p>
+    <tr align="center">
+        <td rowspan="2">ФИО</td>
+        <td rowspan="2">Должность</td>
+        <td colspan="5">Дополнительные данные</td>
+    </tr>
+    <tr align="center">
+        <td>Рабочая почта</td>
+        <td>Номер телефона</td>
+        <td>Кабинет</td>
+        <td>Стаж работы</td>
+        <td>Работа в офисе</td>
+    <tr align="center">
+        <td>Бысик Виктор Михайлович</td>
+        <td>Начальник управления</td>
+        <td>bysik_v@lwo.by</td>
+        <td>41001</td>
+        <td>401</td>
+        <td>10 лет 6 месяцев</td>
+        <td>Да</td>
+    </tr>
+    <tr align="center">
+        <td>Демидкин Дмитрий Васильевич</td>
+        <td>Заместитель начальника управления</td>
+        <td>demidkin_d@lwo.by</td>
+        <td>41002</td>
+        <td>408</td>
+        <td>7 лет 2 месяца</td>
+        <td>Да</td>
+    </tr>
+    <tr align="center">
+        <td>Хвин Марина Владимировна</td>
+        <td>Специалист</td>
+        <td>khvin_m@lwo.by</td>
+        <td>47890</td>
+        <td>101</td>
+        <td>9 месяцев</td>
+        <td>Нет</td>
+    </tr>
+    <tr align="center">
+        <td>Воробьев Евгений Павлович</td>
+        <td>Ведущий инженер-программист</td>
+        <td>vorobyev_e@lwo.by</td>
+        <td>48009</td>
+        <td>401</td>
+        <td>6 лет 6 месяцев</td>
+        <td>Нет</td>
+    </tr>
+    <tr align="center">
+        <td>Шаров Максим Викторович</td>
+        <td>Главный специалист</td>
+        <td>sharov_m@lwo.by</td>
+        <td>49008</td>
+        <td>345</td>
+        <td>4 года 7 месяцев</td>
+        <td>Да</td>
+    </tr>
+    <tr align="center">
+        <td>Альсевич Валентина Витальевна</td>
+        <td>Ведущий бизнес-аналитик</td>
+        <td>alsevich_v@lwo.by</td>
+        <td>43007</td>
+        <td>678</td>
+        <td>1 год 9 месяцев</td>
+        <td>Да</td>
+    </tr>
+    <tr align="center">
+        <td>Карелина Евгения Эдуардовна</td>
+        <td>Инженер-программист</td>
+        <td>karelina_e@lwo.by</td>
+        <td>43054</td>
+        <td>456</td>
+        <td>1 год</td>
+        <td>Нет</td>
+    </tr>
+</table>
+
+<h2>Добавление нового сотрудника</h2>
+<div class="newperson">
+    <table>
+        <tr>
+            <td class="left">
+                <label for="surname">Фамилия</label>
+            </td>
+            <td class="right">
+                <input type="text" id="surname" name="surname" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="name">Имя</label>
+            </td>
+            <td class="right">
+                <input type="text" id="name" name="name" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="midlname">Отчество</label>
+            </td>
+            <td class="right">
+                <input type="text" id="midlname" name="midlname" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="position">Должность</label>
+            </td>
+            <td class="right">
+                <select name="position" id="position" required>
+                    <option selected disabled>Выберите должность</option>
+                    <option value="boss">Начальник управления</option>
+                    <option value="littleboss">Заместитель начальника управления</option>
+                    <option value="senior">Главный специалист</option>
+                    <option value="middle">Ведущий инженер-программист</option>
+                    <option value="developer">Инженер-программист</option>
+                    <option value="BA">Ведущий бизнес-аналитик</option>
+                    <option value="slave">Специалист</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="email">E-mail</label>
+            </td>
+            <td class="right">
+                <input type="text" id="email" name="email" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="phone">Телефон</label>
+            </td>
+            <td class="right">
+                <input type="text" id="phone" name="phone" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label for="room">Кабинет</label>
+            </td>
+            <td class="right">
+                <input type="text" id="room" name="room" value="">
+            </td>
+        </tr>
+        <tr>
+            <td class="left">
+                <label>Работа в офисе:</label>
+            </td>
+            <td class="right">
+                <input type="checkbox" id="var1" name="var1" value="officework">
+                <label for="var1">Офис</label><br>
+                <input type="checkbox" id="var2" name="var2" value="home">
+                <label for="var2">Дом</label><br>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<button type="button">Создать</button>
+
+<h2>Поиск сотрудника</h2>
+<div id="search">
+    <div class="button-search"></div>
+    <input type="text" name="search" placeholder="Поиск" value="">
+</div>
+
+<p>Домашнее задание выполнено с помощью инфы вот <a href="https://www.w3schools.com" target="_blank">отсюда</a></p>
+
+
+<h2>И напоследок...</h2>
+<p>Коротко о проделанной работе:</p>
+
+<img src="https://memepedia.ru/wp-content/uploads/2020/09/b2b7c451cbddc634ecc0dc37031fb4d6.jpg" width="342"
+     height="245">
+
+<hr>
+<footer>
+    Copyright Alena Vainilovich
+</footer>
+</hr>
+</body>
+</html>
